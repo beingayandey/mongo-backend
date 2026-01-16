@@ -1,5 +1,12 @@
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 
+// Load environment variables from .env file
+dotenv.config({
+  path: './.env',
+});
+
+// Connect to MongoDB
 const connectDB = async () => {
   try {
     const connectionInstance = await mongoose.connect(process.env.MONGODB_URI);
@@ -12,5 +19,4 @@ const connectDB = async () => {
   }
 };
 
-connectDB();
 export default connectDB;

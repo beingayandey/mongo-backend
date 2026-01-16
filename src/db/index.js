@@ -6,6 +6,8 @@ dotenv.config({
   path: './.env',
 });
 
+
+
 // Connect to MongoDB
 const connectDB = async () => {
   try {
